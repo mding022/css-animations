@@ -44,17 +44,16 @@ export default function Home() {
         <h1 className="text-white text-3xl font-bold mt-10 ml-10 animate-0">Modern CSS Animations <a href="https://millerding.com" target="_blank"><button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-200 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">by Miller Ding</button></a></h1>
         <h1 className="text-white text-xl font-normal mt-2 ml-10 animate-0 max-w-[45%]">A collection of modern, smooth, and simple to implement <span className="font-semibold">CSS animations</span> for your next&nbsp;
           <TextLoop interval={2000} delay={1000}><span>React app.</span><span>Next.js app.</span><span>Vue.js app.</span><span>Angular app.</span><span>Svelte app.</span><span>Ember.js app.</span><span>Bootstrap app.</span>
-          </TextLoop> No JS required, just paste it into your .css file.</h1>
-        <div className="text-white text-xl font-semibold absolute right-10 top-10 flex gap-4 hover:underline underline-offset-8">
-          <a href="#">
-            <h1>Help</h1>
+          </TextLoop> No JS required, just paste it into your .css file.
+          <br />
+          <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 font-semibold text-lg hover:underline underline-offset-4">
+            Using keyframe animations in CSS
           </a>
-          <a href="#">
-            <h1></h1>
-          </a>
-        </div>
+        </h1>
         <div className="flex flex-col items-center">
-          <h1 className="text-white text-2xl font-bold mt-10 animate-0-staggered">Click any to copy.</h1>
+          <h1 className="text-white text-2xl font-bold mt-10 animate-0-staggered">
+            Click to Copy
+          </h1>
           <div className="grid grid-cols-3 gap-8 mt-8 text-white font-semibold sm:text-xl md:text-3xl lg:text-4xl animate-0-staggered2">
             {animations.map((animation, index) => (
               <motion.div

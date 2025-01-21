@@ -7,12 +7,15 @@ body {
 }
 
 @keyframes animate0 {
-  from {
+  0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
     transform: translateY(-20px);
     filter: blur(10px) sepia(1) hue-rotate(180deg) saturate(2);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0) sepia(0) hue-rotate(0deg) saturate(1);
@@ -23,7 +26,7 @@ body {
   0% {
     opacity: 0;
   }
-  55% {
+  50% {
     opacity: 0;
     transform: translateY(-20px);
     filter: sepia(1) hue-rotate(180deg) saturate(2);
@@ -36,15 +39,15 @@ body {
 }
 
 .animate-0 {
-  animation: animate0 0.75s ease-out;
+  animation: animate0 1.20s ease-out;
 }
 
 .animate-0-staggered {
-  animation: animate0-stg 1s ease-out;
+  animation: animate0-stg 2s ease-out;
 }
 
 .animate-0-staggered2 {
-  animation: animate0-stg 1.35s ease-out;
+  animation: animate0-stg 3s ease-out;
 }
 
 @keyframes animate1 {
