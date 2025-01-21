@@ -1,7 +1,9 @@
 'use client'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import TextLoop from "react-text-loop";
+import { useState, useEffect } from 'react'
+import TextLoop from "react-text-transition";
+
+const TEXTS = ['React app.', 'Next.js app.', 'Vue.js app.', 'Angular app.', 'Svelte app.', 'Ember.js app.', 'Bootstrap app.'];
 
 const animations = [
   'animate-1',
@@ -22,6 +24,17 @@ const animationCode = [
 ];
 
 export default function Home() {
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000,
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   const [copied, setCopied] = useState(false);
 
   const handleClick = (index) => {
@@ -43,8 +56,7 @@ export default function Home() {
         }}>
         <h1 className="text-white text-3xl font-bold mt-10 ml-10 animate-0">Modern CSS Animations <a href="https://millerding.com" target="_blank"><button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-200 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">by Miller Ding</button></a></h1>
         <h1 className="text-white text-xl font-normal mt-2 ml-10 animate-0 max-w-[45%]">A collection of modern, smooth, and simple to implement <span className="font-semibold">CSS animations</span> for your next&nbsp;
-          <TextLoop interval={2000} delay={1000}><span>React app.</span><span>Next.js app.</span><span>Vue.js app.</span><span>Angular app.</span><span>Svelte app.</span><span>Ember.js app.</span><span>Bootstrap app.</span>
-          </TextLoop> No JS required, just paste it into your .css file.
+          <TextLoop inline="true">{TEXTS[index]}</TextLoop> No JS required, just paste it into your .css file.
           <br />
           <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 font-semibold text-lg hover:underline underline-offset-4">
             Using keyframe animations in CSS
