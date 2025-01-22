@@ -16,12 +16,12 @@ const animations = [
 ];
 
 const animationCode = [
-  "@keyframes animate1 { to { opacity: 0; transform: translateY(-20px); filter: blur(10px) sepia(1) hue-rotate(180deg) saturate(2); } from { opacity: 1; transform: translateY(0); filter: blur(0) sepia(0) hue-rotate(0deg) saturate(1); }}",
-  'code-2',
-  'code-3',
-  'code-4',
-  'code-5',
-  'code-6'
+  "@keyframes animate1 { from { opacity: 0; transform: translateY(-20px); filter: blur(10px) sepia(1) hue-rotate(180deg) saturate(2); } to { opacity: 1; transform: translateY(0); filter: blur(0) sepia(0) hue-rotate(0deg) saturate(1); }}",
+  '@keyframes animate2 { from { opacity: 0; transform: scale(0.9); filter: brightness(0.5); } to { opacity: 1; transform: scale(1); filter: brightness(1); }}',
+  '@keyframes animate3 { from { opacity: 0; transform: scaleY(0.8); filter: contrast(0.5); } to { opacity: 1; transform: scaleY(1); filter: contrast(1); }}',
+  '@keyframes animate4 { from { opacity: 0; transform: translateX(100px); filter: grayscale(100%) blur(5px); } 50% {opacity: 1; transform: translateX(0); filter: grayscale(0) blur(0); }}',
+  '@keyframes animate5 { from { opacity: 0; transform: scale(0.7), translateY(-10px); filter: blur(30px); } 50% { opacity: 1; transform: scale(1), translateY(0px); filter: blur(0); }}',
+  '@keyframes animate6 { from { opacity: 0; transform: scale(1.1); filter: sepia(1) saturate(0.5) hue-rotate(20deg); } 50% { opacity: 1; transform: scale(1); filter: sepia(0) saturate(1) hue-rotate(0deg); }}'
 ];
 
 export default function Home() {
