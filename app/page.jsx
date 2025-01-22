@@ -3,7 +3,8 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import TextLoop from "react-text-transition";
 
-const TEXTS = ['React app.', 'Next.js app.', 'Vue.js app.', 'Angular app.', 'Svelte app.', 'Ember.js app.', 'Bootstrap app.'];
+const TEXTS = ['React', 'Next.js', 'Vue.js', 'Angular', 'Svelte', 'Ember.js', 'Bootstrap'];
+const COLORS = ['text-cyan-300', "text-[#fdf5e6]", "text-green-300", 'text-red-300', 'text-orange-300', 'text-orange-700', 'text-indigo-300']
 
 const animations = [
   'animate-1',
@@ -49,17 +50,19 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-0 w-full cursor-crosshair">
+    <main className="flex min-h-screen flex-col items-center justify-between p-0 w-full">
       <div className="min-h-screen flex flex-col w-full"
         style={{
           background: 'radial-gradient(at 90% 14%, rgba(16, 110, 232, 0.35) 0px, transparent 50%), radial-gradient(at 82% 69%, rgba(26, 10, 83, 0.35) 0px, transparent 50%), radial-gradient(at 59% 5%, rgba(181, 26, 0, 0.35) 0px, transparent 50%), #001524'
         }}>
         <h1 className="text-white text-3xl font-bold mt-10 ml-10 animate-0">Modern CSS Animations <a href="https://millerding.com" target="_blank"><button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-200 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">by @mding022</button></a></h1>
-        <h1 className="text-white text-xl font-normal mt-2 ml-10 animate-0 max-w-[45%]">A collection of modern, smooth, and simple to implement <span className="font-semibold">CSS animations</span> for your next&nbsp;
-          <TextLoop inline="true">{TEXTS[index % TEXTS.length]}</TextLoop> No JS required, just paste it into your .css file.
+        <h1 className="text-white text-xl font-normal mt-2 ml-10 animate-0 max-w-[50%] sm:max-w-[80%] md:max-w-[65%] lg:max-w-[45%]">A collection of modern, smooth, and simple to implement <span className="font-semibold">CSS animations</span> for your next&nbsp;
+          <TextLoop inline="true" className={`${COLORS[index % COLORS.length]}`}><span className="font-extrabold">{TEXTS[index % TEXTS.length]}</span></TextLoop>&nbsp;app. No JS required, just paste it into your .css file.
           <br />
-          <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 font-semibold text-lg hover:underline underline-offset-4">
-            Using keyframe animations in CSS
+          <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 font-semibold text-lg">
+            <button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-300 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">
+              Using keyframe animations in CSS
+            </button>
           </a>
         </h1>
         <div className="flex flex-col items-center">
