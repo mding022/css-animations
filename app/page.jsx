@@ -58,13 +58,12 @@ export default function Home() {
         <h1 className="text-white text-3xl font-bold mt-10 ml-10 animate-0">Modern CSS Animations <a href="https://millerding.com" target="_blank"><button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-200 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">by @mding022</button></a></h1>
         <h1 className="text-white text-xl font-normal mt-2 ml-10 animate-0 max-w-[50%] sm:max-w-[80%] md:max-w-[65%] lg:max-w-[45%]">A collection of modern, smooth, and simple to implement <span className="font-semibold">CSS animations</span> for your next&nbsp;
           <TextLoop inline="true" className={`${COLORS[index % COLORS.length]}`}><span className="font-extrabold">{TEXTS[index % TEXTS.length]}</span></TextLoop>&nbsp;app. No JS required, just paste it into your .css file.
-          <br />
-          <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 font-semibold text-lg">
-            <button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-300 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">
-              Using keyframe animations in CSS
-            </button>
-          </a>
         </h1>
+        <a href="https://www.w3schools.com/css/css3_animations.asp" target='_blank' className="text-slate-400 ml-10 animate-0 font-semibold text-lg">
+          <button role="link" className="relative text-lg text-slate-300 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:bg-slate-300 after:opacity-0 after:transition after:duration-150   after:ease-in-out hover:after:translate-y-0 hover:after:opacity-100">
+            Using keyframe animations in CSS
+          </button>
+        </a>
         <div className="flex flex-col items-center">
           <h1 className="text-white text-2xl font-bold mt-10 animate-0-staggered">
             Click to Copy
